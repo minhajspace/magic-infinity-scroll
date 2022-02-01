@@ -46,4 +46,18 @@
   display: flex;
   margin: 1rem 0;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
+.emply-container{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 28px;
+  font-weight: 700;
+  color: darkgray;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+

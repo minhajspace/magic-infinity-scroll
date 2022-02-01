@@ -29,7 +29,12 @@ function ImageList ()  {
        dispatch(fetchImage(page,params))
     },[page])
 
-    console.log("params===",params)
+
+    const displayLoadingText = () => {
+     return   <div className='emply-container'>{ images.length === 0 ?<p>Nothing to display </p>: <p>Loading...</p>}</div>
+    }
+
+    
 
 
  
@@ -39,7 +44,7 @@ function ImageList ()  {
           dataLength={images.length}
           next={()=>handleNextImageCall()}
           hasMore={true}
-          loader={<h4>Loading ... </h4>}
+          loader={displayLoadingText()}
         >
           <div className='image-container'>
              {images && images.map((imageItem,index)=>{
