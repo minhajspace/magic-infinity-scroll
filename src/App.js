@@ -1,27 +1,11 @@
 import React,{useEffect} from 'react';
-import { useDispatch,useSelector } from 'react-redux';
-import {getCoinList} from './state/actions/CryptoAction'
-import {coinService} from './services/Coinservice'
-
-
+import ImageList from './component/Imagelist';
 import './App.css';
 
-
-const  App =() => {
-   const disatch = useDispatch()
-  useEffect(()=>{
-    disatch(getCoinList())
-},[])
-
-const state = useSelector((state)=>state.crypto.coinList)
-console.log("state===",state)
-
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      
-
-      </header>
+    <div className="container">
+     <ImageList/>
     </div>
   );
 }
